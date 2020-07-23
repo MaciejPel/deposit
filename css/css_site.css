@@ -80,7 +80,7 @@ body {
 	position: absolute;
 	left: 0px;
 	bottom: 0;
-	width: 98.5%;
+	width: 100%;
 }
 #body {
 	display: none;
@@ -96,6 +96,7 @@ body {
 	}
 	#main-footer {
 		position: relative;
+		width: 98.5%;
 	}
 	#main-header {
 		text-align: center;
@@ -113,6 +114,6 @@ body {
 @media (max-height: 700px) {
 	#main-footer {
 		position: static;
-		width: 98.2%;
+		width: 99.3%;
 	}
 }
