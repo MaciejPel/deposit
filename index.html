@@ -4,26 +4,36 @@
 		<meta charset="UTF-8" />
 		<title>Deposit</title>
 		<link rel="icon" href="images/cat.jpg" />
+		<link rel="stylesheet" href="index_css.css" />
 	</head>
 	<body>
-		<h1>Deposit</h1>
-		<ul>
-			<li><a href="#">PHP not supported ;(</a></li>
-			<li><a href="css/genius_train.html">CSS</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-			<li><a href="#">TBD</a></li>
-		</ul>
+		<span id="light" type="submit">🌙</span>
+		<h2>Deposit</h2>
+		<a class="first" href="css/genius_train.html">
+			html & css
+		</a>
+		<a class="js" href="#">
+			js
+		</a>
+		<a class="jquery" href="#">
+			Jquery
+		</a>
+		<a class="git" href="#">
+			Git
+		</a>
+		<script>
+			var span = document.getElementById("light");
+			span.addEventListener("click", function () {
+				if (span.id == "light") {
+					document.body.setAttribute("id", "dark-mode");
+					span.innerHTML = "🌞";
+					span.setAttribute("id", "dark");
+				} else {
+					document.body.removeAttribute("id", "dark-mode");
+					span.setAttribute("id", "light");
+					span.innerHTML = "🌙";
+				}
+			});
+		</script>
 	</body>
 </html>
