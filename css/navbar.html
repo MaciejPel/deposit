@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nav</title>
+	</head>
+	<link rel="stylesheet" href="navbar_css.css" />
+	<body>
+		<nav class="navbar">
+			<span class="open-slide">
+				<a onclick="openSlideMenu()">
+					<svg width="30" height="30">
+						<path d="M0, 5 30,5" stroke="#000" stroke-width="5" />
+						<path d="M0, 14 30,14" stroke="#000" stroke-width="5" />
+						<path d="M0, 23 30,23" stroke="#000" stroke-width="5" />
+					</svg>
+				</a>
+			</span>
+			<ul class="navbar-nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div id="side-menu" class="side-nav">
+			<a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<a href="#">Services</a>
+			<a href="#">Contact</a>
+		</div>
+		<div id="main">
+			<h1>Side Menu</h1>
+		</div>
+		<script>
+			function openSlideMenu() {
+				document.getElementById("side-menu").style.width = "250px";
+				document.getElementById("main").style.marginLeft = "250px";
+			}
+			function closeSideMenu() {
+				document.getElementById("side-menu").style.width = "0";
+				document.getElementById("main").style.marginLeft = "0";
+			}
+		</script>
+	</body>
+</html>
