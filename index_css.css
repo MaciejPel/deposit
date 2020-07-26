@@ -15,13 +15,12 @@ h2 {
 }
 h4 {
 	color: rgb(58, 58, 58);
-	max-width: 36%;
 	cursor: default;
 	padding-left: 12px;
-	margin-top: -3%;
 	font-weight: 100;
 	font-size: 19px;
 	margin-left: 2%;
+	margin-top: -25px;
 }
 
 a .first {
