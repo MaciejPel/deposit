@@ -115,3 +115,9 @@ span:hover {
 .link:hover {
 	font-weight: bolder;
 }
+.basic {
+	background-color: rgb(94, 94, 94);
+}
+.basic:hover {
+	background-color: rgb(85, 85, 85);
+}
