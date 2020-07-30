@@ -22,7 +22,12 @@ h4 {
 	margin-left: 2%;
 	margin-top: -25px;
 }
-
+.links {
+	border: 1px #333 solid;
+	display: inline-block;
+	padding: 0.4% 0% 0.4% 0.4%;
+	border-radius: 10px;
+}
 a .first {
 	margin-left: 0px;
 }
@@ -38,12 +43,12 @@ a {
 	float: left;
 	text-align: center;
 	text-transform: capitalize;
-	margin-left: 0.4%;
+	margin-left: 0.3%;
 	transition: border 280ms cubic-bezier(0.4, 0, 0.2, 1),
 		box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
 	transition-property: border, box-shadow;
 	transition: background-color 0.3s;
-	margin-top: 0.2rem;
+	margin-top: 0.3%;
 }
 a:hover {
 	background-color: #1b66ca;
@@ -106,6 +111,9 @@ span:hover {
 #dark-mode span {
 	background-color: #333;
 	user-select: none;
+}
+#dark-mode .links {
+	border: 1px white solid;
 }
 .link {
 	color: #333;
