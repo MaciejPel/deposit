@@ -96,12 +96,17 @@
 					quidem explicabo amet tenetur.
 				</p>
 			</div>
-			<div class="container-3-box">
+			<div id="link" class="container-3-box">
 				<h3>HTML & CSS</h3>
 				<p>
-					<a href="html_&_css.html">⏪</a>
+					⏪
 				</p>
 			</div>
 		</div>
+		<script>
+			document.getElementById("link").onclick = function () {
+				location.href = "html_&_css.html";
+			};
+		</script>
 	</body>
 </html>

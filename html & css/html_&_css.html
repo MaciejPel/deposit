@@ -9,54 +9,27 @@
 	</head>
 	<body>
 		<span id="light" type="submit">🌙</span>
-		<h2 class="link">Deposit</h2>
-		<h4>/HTML & CSS</h4>
+		<h2>Deposit</h2>
+		<h4><span id="up">⤴/Main</span>/HTML & CSS</h4>
 		<div class="links">
 			<a class="first" href="genius_train.html">Train gif</a>
-			<a href="service.html">
-				Service
-			</a>
-			<a href="photos.html">
-				Mobile First
-			</a>
-			<a href="elegant.html">
-				Blur Landing
-			</a>
-			<a href="grid_site.html">
-				Grid Site
-			</a>
-
-			<a href="animate.html">
-				Animate css
-			</a>
-			<a href="presentation.html">
-				Presentation
-			</a>
+			<a href="service.html">Service</a>
+			<a href="photos.html">Mobile First</a>
+			<a href="presentation.html"> Presentation </a>
+			<a href="elegant.html">Blur Landing</a>
+			<a href="grid_site.html">Grid Site</a>
+			<a href="grid_mobile.html">Grid mobile</a>
+			<a href="grid_span.html">Grid Span</a>
 			<a href="background.html">Bg Video </a>
-			<a href="canvas.html">
-				Canvas
-			</a>
-			<a href="parallax.html">
-				Parallax
-			</a>
-			<a href="smooth.html">
-				Smooth Scroll
-			</a>
-			<a class="basic" href="flexbox.html">
-				Flexbox
-			</a>
-			<a class="basic" href="grid.html">
-				Grid
-			</a>
-			<a class="basic" href="text_animation.html">
-				txt anim
-			</a>
-			<a class="basic" href="navbar.html">
-				Navbar
-			</a>
-			<a class="basic" href="beginner.html">
-				trash can
-			</a>
+			<a href="canvas.html">Canvas</a>
+			<a href="animate.html">Animate css</a>
+			<a href="parallax.html">Parallax</a>
+			<a href="smooth.html">Smooth Scroll</a>
+			<a class="basic" href="flexbox.html">Flexbox</a>
+			<a class="basic" href="grid.html">Grid</a>
+			<a class="basic" href="text_animation.html">txt anim</a>
+			<a class="basic" href="navbar.html">Navbar</a>
+			<a class="basic" href="beginner.html">trash can</a>
 		</div>
 		<script>
 			var span = document.getElementById("light");
@@ -74,6 +47,10 @@
 			var h2 = document.getElementsByTagName("h2");
 			h2[0].onclick = function () {
 				location.href = "../index.html";
+			};
+			var up = document.getElementById("up");
+			up.onclick = function () {
+				window.history.back();
 			};
 		</script>
 	</body>

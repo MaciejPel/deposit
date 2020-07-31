@@ -2,34 +2,45 @@
 body {
 	font-family: "Roboto", sans-serif;
 	font-size: 30px;
-	background-color: rgb(226, 226, 226);
+	background-color: rgb(235, 235, 235);
 	color: whitesmoke;
 	overflow: hidden;
+	background: url("html & css/css images/light.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	transition: 1s background;
 }
 
 h2 {
-	color: rgb(58, 58, 58);
+	color: rgb(22, 22, 22);
 	max-width: 10%;
 	cursor: default;
 	padding-left: 12px;
+	transition: 1s color;
 }
 h4 {
-	color: rgb(58, 58, 58);
+	color: rgb(37, 37, 37);
 	cursor: default;
 	padding-left: 12px;
-	font-weight: 100;
+	font-weight: 300;
 	font-size: 19px;
 	margin-left: 2%;
 	margin-top: -25px;
+	transition: 1s color;
 }
 .links {
 	border: 1px #333 solid;
 	display: inline-block;
-	padding: 0.4% 0% 0.4% 0.4%;
+	padding: 0.2% 0% 0.4% 0.2%;
 	border-radius: 10px;
+	max-width: 90%;
+	min-width: 21vw;
+	background-color: rgba(255, 255, 255, 0.603);
+	transition: 1s background;
 }
-a .first {
-	margin-left: 0px;
+#dark-mode .links {
+	background-color: #0b0d31;
 }
 a {
 	color: #333;
@@ -61,7 +72,6 @@ a:active {
 }
 span {
 	float: right;
-	background-color: rgb(226, 226, 226);
 	border: none;
 	transform: scale(1.3);
 	padding-right: 1.6%;
@@ -72,7 +82,18 @@ span:hover {
 	transform: scale(1.4);
 	transition-duration: transform 0.2s;
 }
-
+#up {
+	float: none;
+	transform: none;
+	padding: 0;
+	cursor: pointer;
+	color: #000000;
+	font-weight: 400;
+	transition: 1s;
+	font-weight: 900;
+}
+#up:hover {
+}
 .js {
 	background-color: #f0d91d;
 	font-weight: 900;
@@ -86,6 +107,7 @@ span:hover {
 }
 .jquery {
 	background-color: #291ec0;
+	text-transform: none;
 }
 .jquery:hover {
 	background-color: #241aa8;
@@ -93,38 +115,62 @@ span:hover {
 .jquery:active {
 	background-color: #1b1485;
 }
-.git {
+.html {
 	background-color: #e94f32;
 }
-.git:hover {
+.html:hover {
 	background-color: #c7442a;
 }
-.git:active {
+.html:active {
 	background-color: #aa3923;
 }
+.git {
+	background-color: #313131;
+}
+.git:hover {
+	background-color: #1b1b1b;
+}
+.git:active {
+	background-color: #0f0f0f;
+}
 #dark-mode,
-#dark-mode h2,
-#dark-mode h4 {
-	background-color: #333;
+#dark-mode h2 {
 	color: white;
+	transition: 1s color;
+}
+#dark-mode h4 {
+	color: rgb(221, 221, 221);
+}
+#dark-mode #up {
+	color: #fff;
+	transition: 1s;
 }
 #dark-mode span {
-	background-color: #333;
+	background-color: transparent;
 	user-select: none;
 }
 #dark-mode .links {
 	border: 1px white solid;
+	background-color: rgba(30, 20, 88, 0.473);
+	transition: 1s background;
+}
+#dark-mode {
+	background: url("html & css/css images/dark.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	transition: 1s background;
 }
 .link {
-	color: #333;
+	color: #06071b;
 	cursor: pointer;
 }
 .link:hover {
 	font-weight: bolder;
 }
 .basic {
-	background-color: rgb(94, 94, 94);
+	background-color: rgb(78, 78, 78);
 }
 .basic:hover {
-	background-color: rgb(85, 85, 85);
+	background-color: rgb(65, 65, 65);
 }

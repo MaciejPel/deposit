@@ -34,7 +34,12 @@
 			</div>
 			<div><a href="grid2.html">grid2.html</a></div>
 			<div><a href="grid3.html">grid3.html</a></div>
-			<div><a href="html_&_css.html">HTML & CSS</a></div>
+			<div id="link"><a href="html_&_css.html">HTML & CSS</a></div>
 		</div>
+		<script>
+			document.getElementById("link").onclick = function () {
+				location.href = "html_&_css.html";
+			};
+		</script>
 	</body>
 </html>
