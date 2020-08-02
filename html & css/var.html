@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<header id="main-header">
-			<h1>CSS variables</h1>
+			<h1>CSS variables <span id="link">HTML & CSS</span></h1>
 		</header>
 		<div class="container">
 			<div class="grid">
@@ -42,6 +42,9 @@
 			const boxMainColor = boxStyles.getPropertyValue("--box-main-color");
 			const header = document.querySelector("#main-header");
 			header.style.setProperty("--header-bgcolor", boxMainColor);
+			document.getElementById("link").onclick = function () {
+				location.href = "html_&_css.html";
+			};
 		</script>
 	</body>
 </html>

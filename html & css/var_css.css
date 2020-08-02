@@ -4,6 +4,11 @@
 	--container-width: 90%;
 	--header-bgcolor: #333;
 	--header-txt-color: #fff;
+	--link-color: rgb(238, 183, 255);
+}
+span {
+	color: var(--link-color);
+	cursor: pointer;
 }
 body {
 	margin: 0;
