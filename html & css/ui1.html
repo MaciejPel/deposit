@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ui1</title>
+		<link rel="stylesheet" href="ui1_css.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="card">
+				<div class="card-header">
+					<img src="https://raw.githubusercontent.com/bradtraversy/ui_components/master/1_blog_cards/images/rover.jpeg" alt="" />
+				</div>
+				<div class="card-body">
+					<span class="tag tag-teal">Technology</span>
+					<h4>Why is the Tesla Cybertruck designed the way it is?</h4>
+					<p>An exploration into the truck's polarising design</p>
+					<div class="user">
+						<img src="https://raw.githubusercontent.com/bradtraversy/ui_components/master/1_blog_cards/images/user-1.jpg" alt="" />
+						<div class="user-info">
+							<h5>Carrie Brewer</h5>
+							<small>2h ago</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<img src="https://raw.githubusercontent.com/bradtraversy/ui_components/master/1_blog_cards/images/ballons.jpeg" alt="" />
+				</div>
+				<div class="card-body">
+					<span class="tag tag-purple">Popular</span>
+					<h4>How to Keep Going When You Don't Know What's Next</h4>
+					<p>The future can be scary, but there are ways to deal with that fear.</p>
+					<div class="user">
+						<img src="https://raw.githubusercontent.com/bradtraversy/ui_components/master/1_blog_cards/images/user-2.jpg" alt="" />
+						<div class="user-info">
+							<h5>Jerome Walton</h5>
+							<small>Yesterday</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<img src="https://raw.githubusercontent.com/bradtraversy/ui_components/master/1_blog_cards/images/city.jpeg" alt="" />
+				</div>
+				<div class="card-body">
+					<span class="tag tag-pink">Design</span>
+					<h4>10 Rules of Dashboard Design</h4>
+					<p>Dashboard Design Guidelines</p>
+					<div class="user">
+						<img src="https://raw.githubusercontent.com/bradtraversy/ui_components/master/1_blog_cards/images/user-3.jpg" alt="" />
+						<div class="user-info">
+							<h5>Lewis Daniels</h5>
+							<small>23 Dec 2019</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button id="prev">HTML & CSS</button>
+		<a id="next">Ui2</a>
+	</body>
+	<script>
+		document.getElementById("prev").onclick = function () {
+			location.href = "html_&_css.html";
+		};
+		document.getElementById("next").onclick = function () {
+			location.href = "ui2.html";
+		};
+	</script>
+</html>
