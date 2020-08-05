@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fullscreen Slider</title>
+		<link rel="stylesheet" href="slider_css.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="arrow-left" class="arrow"></div>
+			<div id="slider">
+				<div class="slide slide1">
+					<div class="slide-content">
+						<span>Image one</span>
+						<button id="link">HTML & CSS</button>
+					</div>
+				</div>
+				<div class="slide slide2">
+					<div class="slide-content">
+						<span>Image two</span>
+					</div>
+				</div>
+				<div class="slide slide3">
+					<div class="slide-content">
+						<span>Image three</span>
+					</div>
+				</div>
+			</div>
+			<div id="arrow-right" class="arrow"></div>
+		</div>
+		<script>
+			document.getElementById("link").onclick = function () {
+				location.href = "html_&_css.html";
+			};
+			let sliderImages = document.querySelectorAll(".slide"),
+				arrowRight = document.querySelector("#arrow-right"),
+				arrowLeft = document.querySelector("#arrow-left"),
+				current = 0;
+			function reset() {
+				for (let i = 0; i < sliderImages.length; i++) {
+					sliderImages[i].style.display = "none";
+				}
+			}
+			function startSlide() {
+				reset();
+				sliderImages[0].style.display = "block";
+			}
+			function slideLeft() {
+				reset();
+				sliderImages[current - 1].style.display = "block";
+				current--;
+			}
+			arrowLeft.addEventListener("click", function () {
+				if (current === 0) {
+					current = sliderImages.length;
+				}
+				slideLeft();
+			});
+			function slideRight() {
+				reset();
+				sliderImages[current + 1].style.display = "block";
+				current++;
+			}
+			arrowRight.addEventListener("click", function () {
+				if (current === sliderImages.length - 1) {
+					current = -1;
+				}
+				slideRight();
+			});
+			startSlide();
+		</script>
+	</body>
+</html>
