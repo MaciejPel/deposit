@@ -4,12 +4,10 @@ body {
 	font-size: 30px;
 	background-color: rgb(235, 235, 235);
 	color: whitesmoke;
-	overflow: hidden;
-	background: url("html & css/css images/light.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
+	background: url("html & css/css images/light.jpg") no-repeat center fixed;
+	height: 100%;
 	transition: 1s background;
+	overflow-x: hidden;
 }
 
 h2 {
@@ -55,8 +53,7 @@ a {
 	text-align: center;
 	text-transform: capitalize;
 	margin-left: 0.3%;
-	transition: border 280ms cubic-bezier(0.4, 0, 0.2, 1),
-		box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: border 280ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
 	transition-property: border, box-shadow;
 	transition: background-color 0.3s;
 	margin-top: 0.3%;
@@ -64,8 +61,7 @@ a {
 a:hover {
 	background-color: #1b66ca;
 	transition: background-color 0.3s;
-	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
-		0 1px 3px 1px rgba(60, 64, 67, 0.15);
+	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 a:active {
 	background-color: #1459b3;
@@ -92,8 +88,7 @@ span:hover {
 	transition: 1s;
 	font-weight: 900;
 }
-#up:hover {
-}
+
 .js {
 	background-color: #f0d91d;
 	font-weight: 900;
@@ -155,10 +150,7 @@ span:hover {
 	transition: 1s background;
 }
 #dark-mode {
-	background: url("html & css/css images/dark.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
+	background: url("html & css/css images/dark.jpg") no-repeat bottom right fixed;
 	transition: 1s background;
 }
 .link {
