@@ -5,10 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Phono</title>
 		<link rel="stylesheet" href="phono_css.css" />
-		<link rel="stylesheet" href="simplelightbox.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css" />
 		<script src="https://kit.fontawesome.com/3da1a747b2.js"></script>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body id="home">
 		<nav class="navbar">
@@ -17,6 +16,7 @@
 				<ul class="nav">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
+					<li><a href="html_&_css.html">HTML & CSS</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -56,10 +56,49 @@
 					<a href="#">
 						<i class="fab fa-twitter fa-2x"></i>
 					</a>
+					<a href="#">
+						<i class="fab fa-facebook fa-2x"></i>
+					</a>
+					<a href="#">
+						<i class="fab fa-youtube fa-2x"></i>
+					</a>
+				</div>
+				<div>
+					<h3>Company Info</h3>
+					<ul>
+						<li><a href="#">All Products</a></li>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Service</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3>Blog Posts</h3>
+					<ul>
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3>Subscribe</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam?</p>
+					<form name="email-form" method="POST" data-netlify="true">
+						<div class="email-form">
+							<span class="form-control-wrap">
+								<input type="email" name="email" id="email" size="40" class="form-control" placeholder="Email" />
+							</span>
+							<button type="submit" class="form-control submit">
+								<i class="fas fa-chevron-right"></i>
+							</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</footer>
-		<script src="simplelightbox.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js"></script>
 		<script>
 			$(function () {
 				const $gallery = $(".gallery a").simpleLightbox();
