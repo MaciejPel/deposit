@@ -6,18 +6,31 @@
 		<link rel="icon" href="images/cat.png" />
 		<link rel="stylesheet" href="index_css.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 	</head>
 	<body>
-		<span id="light" type="submit">🌙</span>
+		<span id="light" class="standStill" type="submit">🌙</span>
 		<h2>Deposit</h2>
-		<h4>/Main</h4>
-		<a class="first html" href="html & css/html_&_css.html">HTML & CSS</a>
-		<a class="js" href="#">Js</a>
-		<a class="jquery" href="#">jQuery</a>
-		<a class="git" href="https://github.com/MaciejPel/">GIT</a>
+		<h4>/Main<span id="up"></span><span id="typing">█</span></h4>
+		<a id="first" class="html">HTML & CSS</a><a class="js">Js</a><a class="jquery">jQuery</a><a class="git" href="https://github.com/MaciejPel/">GIT</a><a href="#dark">dark-mode</a>
+		<p><i class="fas fa-chevron-right"></i></p>
+		<div id="links" class="links"></div>
 		<script>
 			var span = document.getElementById("light");
-			span.addEventListener("click", function () {
+			var up = document.getElementById("up");
+			var html = document.querySelector(".html");
+			var js = document.querySelector(".js");
+			var jquery = document.querySelector(".jquery");
+			var chevron = document.querySelector(".fa-chevron-right");
+			var links = document.querySelector(".links");
+			var typing = document.getElementById("typing");
+
+			span.addEventListener("click", darkMode);
+			html.addEventListener("click", loadContent);
+			js.addEventListener("click", loadContent);
+			jquery.addEventListener("click", loadContent);
+
+			function darkMode() {
 				if (span.id == "light") {
 					document.body.setAttribute("id", "dark-mode");
 					span.innerHTML = "🌞";
@@ -27,7 +40,54 @@
 					span.setAttribute("id", "light");
 					span.innerHTML = "🌙";
 				}
-			});
+			}
+			console.log(window.location.href);
+			function loadContent(e) {
+				var className = e.target.className;
+				var classToUpper = e.target.textContent.toUpperCase();
+				var listOfStyles = getComputedStyle(links);
+				if (listOfStyles["opacity"] == 0) {
+					chevron.style.transform = "rotate(90deg)";
+					links.style.opacity = 1;
+					links.style.marginTop = "0.5em";
+					up.innerHTML = "/" + classToUpper;
+					up.style.opacity = 1;
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function () {
+						if (this.readyState == 4 && this.status == 200) {
+							var arr = JSON.parse(this.responseText);
+							var arrFilter = arr.filter(function (item) {
+								return item.type == className;
+							});
+							readJSON(arrFilter);
+						}
+					};
+					xhttp.open("GET", "subsites.json", true);
+					xhttp.send();
+				} else {
+					setTimeout(function () {
+						links.innerHTML = "";
+					}, 200);
+					chevron.style.transform = "rotate(0deg)";
+					links.style.marginTop = "-0.5em";
+					links.style.opacity = 0;
+					up.style.opacity = 0;
+					up.innerHTML = "";
+				}
+			}
+
+			function readJSON(arr) {
+				var out = "";
+				arr.forEach((e) => {
+					"class" in e ? (out += '<a class="' + e.class + '" href="' + e.href + '">' + e.buttonName + "</a>") : (out += '<a href="' + e.href + '">' + e.buttonName + "</a>");
+				});
+				links.innerHTML = out;
+			}
+
+			setInterval(function () {
+				let listOfStyles = getComputedStyle(typing);
+				listOfStyles["opacity"] == 0 ? (typing.style.opacity = 1) : (typing.style.opacity = 0);
+			}, 600);
 		</script>
 	</body>
 </html>
